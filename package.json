@@ -1,0 +1,22 @@
+{
+  "name": "easy-googlesheets",
+  "version": "1.0.0",
+  "description": "Easily read data from Googlesheets",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "googlesheets",
+    "sheets"
+  ],
+  "author": "Yao Renaud WOANA",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iamrenaud/easy-googlesheets.git"
+  },
+  "dependencies": {
+    "axios": "^0.26.1"
+  }
+}

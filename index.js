@@ -2,7 +2,7 @@ const axios = require('axios').default;
 
 /**
  * 
- * @param {String} spreadsheetURL The url of the spreadsheet, ex: https://docs.google.com/spreadsheets/d/1Nzf5ZDPXvABgxOt3uNGnpBXF_fAdfH8dSKfDZi7dz
+ * @param {String} spreadsheetURL The url of the spreadsheet, ex: https://docs.google.com/spreadsheets/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms
  * @param {Boolean} hasHeaders Indicates if the spreadsheet has headers
  * @param {String|Number} sheetId The Id of the sheet inside the spreadsheet
  * @returns {Promise<Array<object>>} The rows of the specified spreadsheet
@@ -45,12 +45,12 @@ exports.getFromURL = async (spreadsheetURL, hasHeaders = false, sheetId = null) 
 
 /**
  * 
- * @param {String} spreadsheetId The Id of the spreadsheet, ex: 1Nzf5ZDPXvABgxOt3uNGnpBXF_fAdfH8dSKfDZi7dz
+ * @param {String} spreadsheetId The Id of the spreadsheet, ex: 1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms
  * @param {Boolean} hasHeaders Indicates if the spreadsheet has headers
  * @param {String|Number} sheetId The Id of the sheet inside the spreadsheet
  * @returns {Promise<Array<object>>} The rows of the specified spreadsheet
  */
-exports.getFromURL = async (spreadsheetId, hasHeaders = false, sheetId = null) => new Promise((resolve, reject) => {
+exports.getFromID = async (spreadsheetId, hasHeaders = false, sheetId = null) => new Promise((resolve, reject) => {
   axios.get(`https://docs.google.com/spreadsheets/d/${spreadsheetId}/gviz/tq?${sheetId ? `gid=${sheetId}` : ''}`)
     .then((response) => {
       const data = JSON.parse(response.data.slice(47, -2));

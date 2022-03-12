@@ -13,12 +13,12 @@ $ npm install easy-googlesheets
 ```js
 const EasyGooglesheets = require("easy-googlesheets");
 
-EasyGooglesheet.getFromURL('https://docs.google.com/spreadsheets/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms/edit#gid=0', true)
+EasyGooglesheets.getFromURL('https://docs.google.com/spreadsheets/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms/edit#gid=0', true)
   .then((rows) => {
     console.log(data);
   });
 
-EasyGooglesheet.getFromID('1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms', true)
+EasyGooglesheets.getFromID('1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms', true)
   .then((rows) => {
     console.log(data);
   });

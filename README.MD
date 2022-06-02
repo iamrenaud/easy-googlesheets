@@ -15,12 +15,12 @@ const EasyGooglesheets = require("easy-googlesheets");
 
 EasyGooglesheets.getFromURL('https://docs.google.com/spreadsheets/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms/edit#gid=0', true)
   .then((rows) => {
-    console.log(data);
+    console.log(rows);
   });
 
 EasyGooglesheets.getFromID('1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms', true)
   .then((rows) => {
-    console.log(data);
+    console.log(rows);
   });
 ```
 

@@ -8,6 +8,14 @@ An npm package to easily read Google Sheets data. The Share access should be "An
 $ npm install easy-googlesheets
 ```
 
+## API
+
+```js
+getFromURL(spreadsheetURL, hasHeaders = false, gid = '')
+
+getFromID(spreadsheetID, hasHeaders = false, gid = '')
+```
+
 ## Usage 
 
 ```js
@@ -15,12 +23,12 @@ const EasyGooglesheets = require("easy-googlesheets");
 
 EasyGooglesheets.getFromURL('https://docs.google.com/spreadsheets/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms/edit#gid=0', true)
   .then((rows) => {
-    console.log(data);
+    console.log(rows);
   });
 
 EasyGooglesheets.getFromID('1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms', true)
   .then((rows) => {
-    console.log(data);
+    console.log(rows);
   });
 ```
 

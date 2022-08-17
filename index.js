@@ -19,7 +19,7 @@ exports.getFromURL = async (spreadsheetURL, hasHeaders = false, sheetId = null) 
         const rows = data.table.rows.map((row) => row.c.map((col) => col?.v ?? ''));
 
         if (hasHeaders) {
-          const headers = rows.splice(0, 1)[0];
+          const headers = rows.slice(0, 1)[0];
 
           const arrayOfObjects = rows.map((row) => {
             const result = {};
@@ -57,7 +57,7 @@ exports.getFromID = async (spreadsheetId, hasHeaders = false, sheetId = null) =>
       const rows = data.table.rows.map((row) => row.c.map((col) => col?.v ?? ''));
 
       if (hasHeaders) {
-        const headers = rows.splice(0, 1)[0];
+        const headers = rows.slice(0, 1)[0];
 
         const arrayOfObjects = rows.map((row) => {
           const result = {};

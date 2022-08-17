@@ -1,6 +1,6 @@
 {
   "name": "easy-googlesheets",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Easily read data from Googlesheets",
   "main": "index.js",
   "scripts": {
